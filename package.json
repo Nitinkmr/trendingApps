@@ -1,0 +1,20 @@
+{
+  "name": "trendingapps",
+  "version": "1.0.0",
+  "description": "A MEAN stack application to display all the trending Apps from Google Play Store",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www"
+  },
+  "author": "Nitin kumar <knitin917@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.1",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "mongoose": "^5.7.5",
+    "mongoose-paginate": "^5.0.3",
+    "nodemon": "^1.19.4"
+  }
+}
