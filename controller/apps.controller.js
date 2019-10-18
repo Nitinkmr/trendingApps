@@ -26,3 +26,13 @@ exports.getApps = async function(req,res,next)
 	}
 	
 }
+
+exports.scrapeApps = async function(req,res,next)
+{
+	try{
+		appsService.scrapeApps();
+	}catch(e)
+	{
+
+	}
+}

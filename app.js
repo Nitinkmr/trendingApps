@@ -2,7 +2,7 @@ var express = require('express');
 var bluebird = require('bluebird')
 var mongoose = require('mongoose')
 var app = express();
-var appsAPI = require('./routes/apps.route');
+var appsRoute = require('./routes/apps.route');
 mongoose.Promise = bluebird
 
 var listener = app.listen(8080, function(){
@@ -19,7 +19,7 @@ var listener = app.listen(8080, function(){
 	  next();
 	});
 	//console.log("Express server listening on port %d", app.address().port)
-	app.use('/apps',appsAPI);
+	app.use('/apps',appsRoute);
 
 	app.use(function(req, res, next) {
 	  var err = new Error('Not Found');

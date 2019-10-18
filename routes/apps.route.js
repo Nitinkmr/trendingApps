@@ -5,5 +5,6 @@ var appController = require('../controller/apps.controller')
 
 router.post('/',appController.createApp);
 router.get('/',appController.getApps);
+router.get('/scrape',appController.scrapeApps);
 
 module.exports = router;
