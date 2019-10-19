@@ -17,6 +17,8 @@
     "mongoose": "^5.7.5",
     "mongoose-paginate": "^5.0.3",
     "nodemon": "^1.19.4",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "simple-node-logger": "^18.12.23",
+    "winston": "^3.2.1"
   }
 }

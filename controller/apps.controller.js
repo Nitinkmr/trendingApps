@@ -15,7 +15,7 @@ exports.createApp = async function(req,res,next)
 	}
 }
 
-exports.getApps = async function(req,res,next)
+exports.getApps =  async function(req,res,next)
 {
 	try{
 		var apps = await appsService.getApps();
@@ -27,12 +27,17 @@ exports.getApps = async function(req,res,next)
 	
 }
 
-exports.scrapeApps = async function(req,res,next)
+exports.scrapeApps =  function(req,res,next)
 {
-	try{
-		appsService.scrapeApps();
-	}catch(e)
-	{
+	
+	appsService.scrapeApps() 
+	return res.status(200).json({status: 200, data: null, message: "Apps Scraped Succesfully"});
 
-	}
+	//return res.status(200).json({status: 201, data: apps, message: "Apps Scraping Failed"});
+}
+
+exports.deleteApps = function(req,res,next)
+{
+	appsService.deleteAllApps();
+	return res.status(200).json({status: 200, data: null, message: "All Apps deleted Succesfully"});
 }
