@@ -1,14 +1,27 @@
 var request = require('request');
 var cheerio = require('cheerio');
-
+var stopWords = require('stopword')
 var AppModel = require('../models/apps.model');
-var logger = require('../config/loggingConfig')
+var logger = require('../config/loggingConfig');
+var constants = require('../util/Constants');
 
 exports.createApp = async function(appDetails){
 
+	var package = stopWords.removeStopwords(appDetails.name.split(" "));
+	package = package.join(".");
+	package = constants.packagePrefix + package.toLowerCase();
+	var app =  await module.exports.getApp(package);
+	console.log("recievec app " + app.length);
+	if( app.length > 0)
+	{
+		console.log("App already exists " + package);
+		return ;
+	}	
+	console.log("App doesn't exist" + package);
 	var newApp = new AppModel({
 		name : appDetails.name,
-		imgUrl : appDetails.imgUrl
+		imgUrl : appDetails.imgUrl,
+		package : package
 	});
 
 	try{
@@ -20,11 +33,15 @@ exports.createApp = async function(appDetails){
 	}
 }
 
+exports.getApp = async function(package){
+	logger.info("finding app by package " + package);
+	var app = await AppModel.find({'package':package}).exec();
+	return app;
+}
 exports.getApps =  async function()
 {
 	logger.info("Recieved getApps Request");
 	const results = await AppModel.find({});
-  	console.log(results);
 	return results;
 }
 
@@ -32,10 +49,11 @@ exports.scrapeApps = async function()
 {
 	try{
 		var url = "https://play.google.com/store/apps/collection/topselling_free";
-	
+		var appCache = new Map();
 		request(url,function(error,response,html){
 			if(!error)
 			{
+				var appDetails = []
 				var content = cheerio.load(html);
 				var apps = content('.WsMG1c');
 				var imgs = content('.ZYyTud');
@@ -55,19 +73,20 @@ exports.scrapeApps = async function()
 						if(imgTag !=- null && imgTag['attribs'] != null && imgTag['attribs']['data-src'] != null)
 							imgUrl = imgTag['attribs']['data-src'];
 					}
-						
-					var newApp = new AppModel({
-						name : title,
-						imgUrl : imgUrl
-					});
-					
-					module.exports.createApp(newApp);
-						
+					if(!appCache.has(title))
+					{
+						var data = {
+							name : title,
+							imgUrl : imgUrl
+							};						
+						appDetails.push(data);
+						appCache.set(title,data)
+					}
 				}
-
-			}
-			
-		});
+			}		
+			return storeApps(appDetails);	
+		})
+		
 	}catch(e)
 	{
 
@@ -83,3 +102,12 @@ exports.deleteAllApps = function()
 }
 
 
+var storeApps = function(appDetails){
+	//console.log(appDetails);
+	for(app in appDetails)
+	{
+		console.log(appDetails[app]);
+		module.exports.createApp(appDetails[app]);	
+	}
+	return true;
+	};

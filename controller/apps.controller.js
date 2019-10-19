@@ -27,10 +27,20 @@ exports.getApps =  async function(req,res,next)
 	
 }
 
-exports.scrapeApps =  function(req,res,next)
+exports.getApp =  async function(req,res,next)
 {
+	try{
+		var apps = await appsService.getApp(req.params.package);
+		return res.status(200).json({status: 201, data: apps, message: "Apps fetched Succesfully"})
+	}catch(e)
+	{
+		throw Error("Exception fetching apps from DB");
+	}
 	
-	appsService.scrapeApps() 
+}
+exports.scrapeApps =  async function(req,res,next)
+{	
+	await appsService.scrapeApps() 
 	return res.status(200).json({status: 200, data: null, message: "Apps Scraped Succesfully"});
 
 	//return res.status(200).json({status: 201, data: apps, message: "Apps Scraping Failed"});

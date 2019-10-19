@@ -7,5 +7,5 @@ router.post('/',appController.createApp);
 router.get('/',appController.getApps);
 router.get('/scrape',appController.scrapeApps);
 router.delete('/',appController.deleteApps);
-
+router.get('/:package',appController.getApp);
 module.exports = router;
