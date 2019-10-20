@@ -6,8 +6,8 @@ var appsRoute = require('./routes/apps.route');
 mongoose.Promise = bluebird
 
 var listener = app.listen(process.env.PORT || 8080, function(){
-//	var conn = "mongodb://nitin:passpass1@ds137368.mlab.com:37368/trendingapps";
-	var conn = "mongodb://127.0.0.1:27017/trendingApps";
+	var conn = "mongodb://nitin:passpass1@ds137368.mlab.com:37368/trendingapps";
+	//var conn = "mongodb://127.0.0.1:27017/trendingApps";
     console.log('Listening on port ' + listener.address().port); 
     mongoose.connect(conn, { useMongoClient: true})
 	.then(()=> { console.log(`Succesfully Connected to the
