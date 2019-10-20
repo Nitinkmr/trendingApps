@@ -14,7 +14,7 @@ var listener = app.listen(process.env.PORT || 8080, function(){
 	.catch(()=> { console.log('Error Connecting to the Mongob Database at URL : mongodb://127.0.0.1:27017/trendingApps')})
 
 	app.use(function(req, res, next) {
-	  res.header("Access-Control-Allow-Origin", "http://localhost:4200");
+	  res.header("Access-Control-Allow-Origin","*"); //"http://localhost:4200");
 	  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
 	  next();
