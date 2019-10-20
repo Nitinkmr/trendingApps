@@ -51,3 +51,4 @@ exports.deleteApps = function(req,res,next)
 	appsService.deleteAllApps();
 	return res.status(200).json({status: 200, data: null, message: "All Apps deleted Succesfully"});
 }
+
