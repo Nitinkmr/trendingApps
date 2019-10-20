@@ -7,7 +7,7 @@ mongoose.Promise = bluebird
 
 var listener = app.listen(8080, function(){
 	var conn = "mongodb://nitin:passpass1@ds137368.mlab.com:37368/trendingapps";
-    console.log('Listening on port ' + listener.address().port); //Listening on port 8888
+    console.log('Listening on port ' + listener.address().port); 
     mongoose.connect(conn, { useMongoClient: true})
 	.then(()=> { console.log(`Succesfully Connected to the
 			Mongodb Database  at URL : mongodb://127.0.0.1:27017/trendingApps`)})
