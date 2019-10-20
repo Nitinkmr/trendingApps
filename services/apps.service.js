@@ -11,13 +11,11 @@ exports.createApp = async function(appDetails){
 	package = package.join(".");
 	package = constants.packagePrefix + package.toLowerCase();
 	var app =  await module.exports.getApp(package);
-	console.log("recievec app " + app.length);
 	if( app.length > 0)
 	{
 		console.log("App already exists " + package);
 		return ;
 	}	
-	console.log("App doesn't exist" + package);
 	var newApp = new AppModel({
 		name : appDetails.name,
 		imgUrl : appDetails.imgUrl,
@@ -101,12 +99,9 @@ exports.deleteAllApps = function()
 	});
 }
 
-
 var storeApps = function(appDetails){
-	//console.log(appDetails);
 	for(app in appDetails)
 	{
-		console.log(appDetails[app]);
 		module.exports.createApp(appDetails[app]);	
 	}
 	return true;
