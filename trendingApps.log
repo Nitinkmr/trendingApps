@@ -5728,3 +5728,59 @@
 2019-10-20 14:45:58.289 INFO  finding app by package com.facebook 
 2019-10-20 14:46:03.286 INFO  finding app by package com.facebook 
 2019-10-20 14:46:03.290 INFO  finding app by package com.facebook 
+2019-10-20 15:47:32.582 INFO  Recieved getApps Request 
+2019-10-20 15:47:49.618 INFO  Recieved getApps Request 
+2019-10-20 16:00:53.140 INFO  Recieved getApps Request 
+2019-10-20 16:03:11.675 INFO  Recieved getApps Request 
+2019-10-20 16:05:20.794 INFO  Recieved getApps Request 
+2019-10-20 16:05:28.970 INFO  finding app by package com.club.factory.-.online.shopping.app 
+2019-10-20 16:05:28.970 INFO  finding app by package com.tiktok 
+2019-10-20 16:05:28.970 INFO  finding app by package com.whatsapp.messenger 
+2019-10-20 16:05:28.970 INFO  finding app by package com.digital.wellbeing 
+2019-10-20 16:05:28.970 INFO  finding app by package com.helo.-.best.interest-based.community.app 
+2019-10-20 16:05:28.970 INFO  finding app by package com.google.pay.(tez).-.simple.secure.payment.app 
+2019-10-20 16:05:28.970 INFO  finding app by package com.shareit.-.transfer.&.share 
+2019-10-20 16:05:28.970 INFO  finding app by package com.likee.-.formerly.video 
+2019-10-20 16:05:28.971 INFO  finding app by package com.flipkart.online.shopping.app 
+2019-10-20 16:05:28.971 INFO  finding app by package com.messenger.–.text.video.chat.free 
+2019-10-20 16:05:28.971 INFO  finding app by package com.truecaller:.caller.id,.sms,.spam.block.&.payments 
+2019-10-20 16:05:28.971 INFO  finding app by package com.hago.-.play.new.friends 
+2019-10-20 16:05:28.971 INFO  finding app by package com.mx.player 
+2019-10-20 16:05:28.971 INFO  finding app by package com.facebook 
+2019-10-20 16:05:28.971 INFO  finding app by package com.carrom.pool 
+2019-10-20 16:05:28.971 INFO  finding app by package com.uc.browser-.free.&.fast.video.downloader,.news.app 
+2019-10-20 16:05:28.971 INFO  finding app by package com.ludo.king™ 
+2019-10-20 16:05:28.971 INFO  finding app by package com.bubble.shooter 
+2019-10-20 16:05:28.971 INFO  finding app by package com.myjio:.everything.jio 
+2019-10-20 16:05:28.971 INFO  finding app by package com.garena.free.fire:.spooky.night 
+2019-10-20 16:05:28.971 INFO  finding app by package com.amazon.india.online.shopping.payments 
+2019-10-20 16:05:28.971 INFO  finding app by package com.mbit.music™.:.particle.ly.video.status.maker 
+2019-10-20 16:05:28.971 INFO  finding app by package com.vmate 
+2019-10-20 16:05:28.971 INFO  finding app by package com.pubg.mobile.lite 
+2019-10-20 16:05:28.971 INFO  finding app by package com.facebook.lite 
+2019-10-20 16:05:28.972 INFO  finding app by package com.gaana.music-.hindi.english.telugu.mp3.songs.online 
+2019-10-20 16:05:28.972 INFO  finding app by package com.sand.balls 
+2019-10-20 16:05:28.972 INFO  finding app by package com.hotstar 
+2019-10-20 16:05:28.972 INFO  finding app by package com.instagram 
+2019-10-20 16:05:28.972 INFO  finding app by package com.phonepe.–.upi.payments,.recharges.&.money.transfer 
+2019-10-20 16:05:28.972 INFO  finding app by package com.jiosaavn.music.&.radio.–.including.jiomusic 
+2019-10-20 16:05:28.972 INFO  finding app by package com.xender.-.share.music&video,share.photo,share.file 
+2019-10-20 16:05:28.972 INFO  finding app by package com.train.:.indian.railway.train.status 
+2019-10-20 16:05:28.972 INFO  finding app by package com.pubg.mobile 
+2019-10-20 16:05:28.972 INFO  finding app by package com.wynk.music.-.download.&.play.songs.&.mp3.free 
+2019-10-20 16:05:28.972 INFO  finding app by package com.tiktok.lite 
+2019-10-20 16:05:28.972 INFO  finding app by package com.subway.surfers 
+2019-10-20 16:05:28.972 INFO  finding app by package com.whatsapp.business 
+2019-10-20 16:05:28.972 INFO  finding app by package com.beautyplus.-.easy.photo.editor.&.selfie.camera 
+2019-10-20 16:05:28.972 INFO  finding app by package com.airtel.thanks.-.recharge,.bill.pay,.bank,.live.tv 
+2019-10-20 16:05:28.972 INFO  finding app by package com.uvideo.-.share.videos,.status.downloader 
+2019-10-20 16:05:28.972 INFO  finding app by package com.spotify:.listen.new.music,.podcasts,.songs 
+2019-10-20 16:05:28.972 INFO  finding app by package com.snapchat 
+2019-10-20 16:05:28.972 INFO  finding app by package com.khata.book.-.udhar.bahi.khata,.ledger.account.book 
+2019-10-20 16:05:28.972 INFO  finding app by package com.turbo.driving.racing.3d 
+2019-10-20 16:05:28.972 INFO  finding app by package com.jiotv.–.live.cricket,.tv,.movies 
+2019-10-20 16:05:28.972 INFO  finding app by package com.bottle.shooting.game 
+2019-10-20 16:05:28.972 INFO  finding app by package com.paytm.-.bhim.upi,.money.transfer.&.mobile.recharge 
+2019-10-20 16:05:28.973 INFO  finding app by package com.drop.stack.ball.-.fall.helix.blast.crash.3d 
+2019-10-20 16:05:28.973 INFO  finding app by package com.fun.race.3d 
+2019-10-20 16:05:44.778 INFO  Recieved getApps Request 
